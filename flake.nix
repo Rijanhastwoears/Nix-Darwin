@@ -1,41 +1,29 @@
 {
-  description = "Rijan's NixOS Configuration Flake";
+  description = "Rijan's Nix-Darwin Configuration Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nix-darwin.url = "github:LnL7/nix-darwin";
+    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs:
+  outputs = { self, nixpkgs, nix-darwin, home-manager, ... }@inputs:
     let
-      system = "x86_64-linux";
+      system = "aarch64-darwin";
       specialArgs = { inherit inputs; };
-
-      pkgs = import nixpkgs {
-        inherit system;
-
-        config = {
-          allowUnfree = true;
-          permittedInsecurePackages = [
-            "electron-27.3.11"
-          ];
-        };
-      };
-
     in {
-      nixosConfigurations = {
-        "nixos" = nixpkgs.lib.nixosSystem {
+      darwinConfigurations = {
+        "nixos" = nix-darwin.lib.darwinSystem {
           inherit system;
-          specialArgs = { inherit inputs pkgs; };
-
+          specialArgs = { inherit inputs; };
           modules = [
-            ./hardware-configuration.nix
             ./configuration.nix
-            home-manager.nixosModules.home-manager
+            home-manager.darwinModules.home-manager
           ];
         };
       };
