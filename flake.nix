@@ -18,7 +18,7 @@
       specialArgs = { inherit inputs; };
     in {
       darwinConfigurations = {
-        "nixos" = nix-darwin.lib.darwinSystem {
+        "macwf05420" = nix-darwin.lib.darwinSystem {
           inherit system;
           specialArgs = { inherit inputs; };
           modules = [

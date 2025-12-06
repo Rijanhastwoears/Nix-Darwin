@@ -7,29 +7,29 @@
       numpy
       pandas
       matplotlib
-      spyder
-      spyder-kernels
+      # spyder
+      # spyder-kernels
       psycopg2
       pyarrow
-      marimo
+      # marimo
       duckdb
-      pysam
+      # pysam
       ipykernel
       jupyterlab
       polars
-      qtconsole
+      # qtconsole
       openpyxl
-      newick
-      ete3
-      pytesseract
-      xlsx2csv
+      # newick
+      # ete3
+      # pytesseract
+      # xlsx2csv
       flask
       sqlalchemy
       flask-sqlalchemy
       werkzeug
       flask-session
-      pdfminer-six
-      pyqt6
+      # pdfminer-six
+      # pyqt6
     ]);
     
   in

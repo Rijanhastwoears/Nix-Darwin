@@ -8,122 +8,122 @@
   ];
     home.packages = with pkgs;
      [
-      anki-bin
+      # anki-bin
       atuin
-      authenticator
-      autoconf269
-      automake115x
-      audacity
+      # authenticator
+      # autoconf269
+      # automake115x
+      # audacity
       awscli2
-      backblaze-b2
-      bcftools
-      beeper
-      brave
-      bzip2
-      c2nim
-      calibre
-      canon-cups-ufr2
+      # backblaze-b2
+      # bcftools
+      # beeper
+      # brave
+      # bzip2
+      # c2nim
+      # calibre
+      # canon-cups-ufr2
       cargo
-      clementine
+      # clementine
       comma
-      csvlens
+      # csvlens
       duckdb
       emacs
-      firefox
+      # firefox
       fish
-      flutter
+      # flutter
       fzf
-      gccgo13
-      gdb
-      gimp
+      # gccgo13
+      # gdb
+      # gimp
       git
-      ghostty
+      # ghostty
       glab
-      glibc
-      gnome-podcasts
-      gnumake42
+      # glibc
+      # gnome-podcasts
+      # gnumake42
       helix
-      htslib
+      # htslib
       hugo
-      inetutils
-      inkscape
-      jdk17
-      jellyfin-ffmpeg
-      joplin-desktop
-      julia
-      kitty
-      kbfs
-      keybase
+      # inetutils
+      # inkscape
+      # jdk17
+      # jellyfin-ffmpeg
+      # joplin-desktop
+      # julia
+      # kitty
+      # kbfs
+      # keybase
       lazygit
-      libgcc
-      libreoffice
-      libsForQt5.kdenlive
-      logseq
-      mercurial
-      mermaid-cli
-      monophony
-      mkdocs
+      # libgcc
+      # libreoffice
+      # libsForQt5.kdenlive
+      # logseq
+      # mercurial
+      # mermaid-cli
+      # monophony
+      # mkdocs
       mosh
       ncurses
-      nim
-      nimble
-      nimlangserver
+      # nim
+      # nimble
+      # nimlangserver
       neovim
-      nodePackages_latest.wrangler
-      notcurses
-      obs-studio
+      # nodePackages_latest.wrangler
+      # notcurses
+      # obs-studio
       ollama
-      onedriver
-      openconnect
+      # onedriver
+      # openconnect
       pandoc
-      perl
-      plink-ng
+      # perl
+      # plink-ng
       postgresql_16
-      protonvpn-gui
-      pyright
+      # protonvpn-gui
+      # pyright
       rclone
-      ripcord
+      # ripcord
       ripgrep
       rustc
-      samba4Full
-      sbcl
-      sioyek
-      slackdump
-      sox
-      spotify
-      spotube
+      # samba4Full
+      # sbcl
+      # sioyek
+      # slackdump
+      # sox
+      # spotify
+      # spotube
       sqlite-interactive
       stow
       syncthing
-      tangram
-      tesseract4
-      the-way
-      thunderbird
-      tinymist
+      # tangram
+      # tesseract4
+      # the-way
+      # thunderbird
+      # tinymist
       tmux
       tree
-      tor-browser
+      # tor-browser
       typst
       unzip
-      valgrind
-      vcftools
-      vlc
-      vivaldi
-      vscode-fhs
-      waydroid
+      # valgrind
+      # vcftools
+      # vlc
+      # vivaldi
+      # vscode-fhs
+      # waydroid
       wget
-      xclip
+      # xclip
       xz
       yazi
       yt-dlp
-      ytdownloader
+      # ytdownloader
       zellij
-      zig
+      # zig
       zip
       zlib
-      zlib.dev
-      zoom-us
-      zotero
+      # zlib.dev
+      # zoom-us
+      # zotero
     ];
 
     programs.atuin = {

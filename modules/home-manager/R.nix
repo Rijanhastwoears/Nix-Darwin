@@ -6,31 +6,31 @@
     my_R_packages_list = with rPackages; [
       tidyverse
       rPackages.languageserver
-      bslib
+      # bslib
       ggplot2
       DT
-      ggpubr
-      shinyFiles
-      bigsnpr
-      ggExtra
-      plotly
-      shiny
-      ape
+      # ggpubr
+      # shinyFiles
+      # bigsnpr
+      # ggExtra
+      # plotly
+      # shiny
+      # ape
       data_table
-      ggtree
-      microbenchmark
+      # ggtree
+      # microbenchmark
       devtools
-      igraph
+      # igraph
       dplyr
       argparse
       rPackages.IRkernel
-      shinyBS
-      reactlog
-      rlang
-      viridis
-      svglite
-      purrr
-      phylotools
+      # shinyBS
+      # reactlog
+      # rlang
+      # viridis
+      # svglite
+      # purrr
+      # phylotools -- BROKEN
     ];
     
     RStudio-with-my-packages = rstudioWrapper.override{
@@ -41,7 +41,7 @@
     };
   in
     [
-      RStudio-with-my-packages
+      # RStudio-with-my-packages
       R-with-my-packages
     ];
 }

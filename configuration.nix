@@ -12,22 +12,17 @@
   nix.enable = false; # Auto-installed by Determinate Systems
 
   # Creating a system user for the user
-  users.users.rijan = {
-    name = "rijan";
-    home = "/Users/rijan";
+  users.users.zr4 = {
+    name = "zr4";
+    home = "/Users/zr4";
+    uid = 502;
   };
 
   # Home Manager Setup
-  home-manager.users.rijan = import ./modules/home-manager/rijan.nix;
+  home-manager.users.zr4 = import ./modules/home-manager/rijan.nix;
 
   # Shell Configuration
   programs.fish.enable = true;
-
-  # System Packages
-  environment.systemPackages = with pkgs; [
-    # vim
-    # wget
-  ];
 
   # System Defaults (macOS specific)
   system.defaults = {
@@ -35,8 +30,18 @@
     finder.AppleShowAllFiles = true;
     NSGlobalDomain.AppleShowAllExtensions = true;
   };
+  
+  # Set the primary user of the system
+  nix.settings.trusted-users = [ "root" "zr4" ];
+  users.knownUsers = [ "zr4" ];
+  # Required by recent nix-darwin checking
+  # Use the username of the primary user
+  # This avoids the "system activation must now be run as root" error conflicts
+  # with user-specific preferences
+  system.primaryUser = "zr4";  
 
   # Used for backwards compatibility, please read the changelog before changing.
   # $ darwin-rebuild changelog
   system.stateVersion = 4;
 }
+
