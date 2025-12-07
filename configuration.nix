@@ -23,6 +23,10 @@
 
   # Shell Configuration
   programs.fish.enable = true;
+  
+  # Ensure Homebrew is in the path
+  environment.systemPath = [ "/opt/homebrew/bin" ];
+  environment.pathsToLink = [ "/Applications" ];
 
   # System Defaults (macOS specific)
   system.defaults = {
